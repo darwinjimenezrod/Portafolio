@@ -50,7 +50,7 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== POPULAR SWIPER ===============*/
-let swiperPopular = new Swiper(".popular__container", {
+let swiperPopular = new Swiper(".projects__container", {
 
     //add this manual
     loop: true,
@@ -67,7 +67,7 @@ let swiperPopular = new Swiper(".popular__container", {
     breakpoints: {
     
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
 
         },
         1024: {
@@ -77,30 +77,10 @@ let swiperPopular = new Swiper(".popular__container", {
   });
 
 
-/*=============== MIXITUP FILTER FEATURED ===============PENDING*/
-
-let mixerFeatured = mixitup('.featured__content', {
-  selectors: {
-      target: '.featured__card'
-  },
-  animation: {
-      duration: 300
-  }
-});
-
-/* Link active featured */ 
-function activeFeatured(){
-const linkFeatured = document.querySelectorAll('.featured__item')
 
 
-   linkFeatured.forEach(n=>n.classList.remove('active-featured'))
-   this.classList.add('active-featured')
-}
 
-linkFeatured.forEach(n=>n.addEventListener('click', activeFeatured))
-
-
-/*=============== SHOW SCROLL UP =============== PENDING*/  
+/*=============== SHOW SCROLL UP =============== */  
 
 function scrollUp(){
     
@@ -146,8 +126,16 @@ const sr = ScrollReveal({
 })
 
 sr.reveal('.home__title')
-sr.reveal('.home__subtitle', {delay:500})
-sr.reveal('.home__elec', {delay:600})
-sr.reveal('.home__img', {delay:800})
-sr.reveal('.home__car-data', {delay:900, interval: 100, origin: 'bottom'})
-sr.reveal('.home__button', {delay:1000, origin: 'bottom'})
+sr.reveal('.home__subtitle', {delay:200})
+sr.reveal('.box', {delay:400})
+sr.reveal('.home__skills-class', {delay:200, interval: 100, origin: 'top'})
+sr.reveal('.home__skills-icon', {delay:250, origin: 'bottom'})
+sr.reveal('.home__skills-name', {delay:250, origin: 'bottom'})
+
+sr.reveal('.about__card-title', {delay:125, interval: 100, origin: 'left'})
+sr.reveal('.about__box', {delay:150, interval: 100, origin: 'left'})
+sr.reveal('.about__data', {delay:175, interval: 100, origin: 'left'})
+
+sr.reveal('.section__title', {delay:250, interval: 100, origin: 'left'})
+sr.reveal('.projects__container', {delay:300, interval: 100, origin: 'left'})
+sr.reveal('.about__data', {delay:350, interval: 100, origin: 'left'})
